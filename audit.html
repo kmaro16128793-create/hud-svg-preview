@@ -213,23 +213,40 @@ h3{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:12px;margin-
   <div class="cover-div"></div>
   <p class="cover-sub" id="csub"></p>
   <div class="cover-meta" id="cmeta"></div>
-  <!-- CyberEl2 — Complex circular HUD (react-cyber-elements) -->
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1522 1522" width="280" height="280" style="margin-top:32px;opacity:0.6;">
+  <!-- CyberEl88 — Complex symmetric HUD (react-cyber-elements EXACT source) -->
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" width="260" height="260" style="margin-top:32px;">
     <defs>
-      <filter id="cg"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+      <filter id="cg" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
     </defs>
-    <style>.cd{fill:rgba(0,240,255,0.1)}.cm{fill:rgba(0,240,255,0.06)}</style>
-    <!-- Dotted ring (outer) -->
-    <path class="cd" d="M775 1376c-8 0-13 6-13 13s6 13 13 13 13-6 13-13c0-8-6-13-13-13zM722 1375c-7 0-13 5-13 12s5 14 12 14c8 0 14-5 14-12 1-8-5-14-12-14h-1zM670 1369c-6 0-12 5-13 12s4 13 11 15c7 1 14-4 15-12 1-7-4-14-11-15h-2zM827 1372h-1c-7 1-13 8-12 15s8 12 15 12c7-1 12-8 12-15-1-7-7-12-14-12zM981 1336c-2 0-4 0-5 1-7 3-10 10-8 17 3 7 10 10 17 8 7-3 11-10 8-17-2-6-7-9-12-9zM931 1352c-2 0-3 1-4 1-7 2-11 9-9 16s9 11 16 9 11-9 9-16c-1-6-7-10-12-10zM1029 1316c-2 0-4 0-6 1-6 3-9 11-6 18 3 6 11 9 18 6 6-3 9-11 6-18-2-5-7-7-12-7zM618 1360c-6 0-11 4-13 10-1 7 3 14 10 16 7 1 14-3 16-10s-3-14-10-16h-3zM879 1365h-2c-7 1-12 8-11 15 2 7 9 12 16 11 7-2 12-9 10-16-1-6-6-10-13-10z"/>
-    <path class="cd" d="M775 1376c-8 0-13 6-13 13s6 13 13 13 13-6 13-13c0-8-6-13-13-13zM734 133c0-7-6-13-13-13h-1c-7 1-13 7-12 14 0 8 6 13 14 13 7-1 13-7 12-14zM774 119h-1c-7 0-13 6-13 13s6 13 13 14c7 0 13-6 14-13 0-8-6-14-13-14zM670 152c8-1 13-8 12-15s-7-11-14-11h-1c-8 1-13 8-12 15 2 7 8 12 15 11zM839 137c1-7-4-14-12-15h-1c-7 0-13 5-13 12-1 7 4 14 12 15 7 1 13-5 14-12zM891 146c1-7-3-14-11-16h-2c-6 0-12 4-13 11s3 14 11 15c7 2 14-3 15-10z"/>
-    <!-- Main arc circle -->
-    <path d="m235 1310 48-51C146 1127 70 950 70 761 70 380 380 70 761 70c189 0 366 76 498 213l51-48C1165 83 970 0 761 0 341 0 0 341 0 761c0 209 83 404 235 549z" fill="rgba(0,240,255,0.05)" filter="url(#cg)"/>
-    <!-- Inner arc -->
-    <path class="cm" d="M756 1495c-169 0-334-59-465-166l-17 21c136 111 307 172 482 172 422 0 766-344 766-766 0-175-61-346-172-482l-21 17c107 131 166 296 166 465 0 408-331 739-739 739z"/>
-    <!-- Measurement crosshair grid -->
-    <path class="cm" d="M299 778h250v125h35V778h155v225h44V778h154v131h35V778h250c-1 20-3 41-6 61l34 6c5-28 8-57 8-84 0-28-3-56-8-85l-34 6c3 21 5 41 6 61H972V618h-35v125H783V518h-44v225H584V613h-35v130H299c1-20 3-40 7-61l-35-6c-5 29-7 57-7 85 0 27 2 56 7 84l35-6c-4-20-6-41-7-61z"/>
-    <!-- Inner measurement marks -->
-    <path class="cd" d="M450 1068l-18 19c27 28 58 52 92 72l14-23c-32-19-62-42-88-68zM740 1197c-58-3-114-17-167-42l-11 24c55 27 115 42 177 44l1-26zM948 1155c-53 25-109 39-167 42l1 26c62-2 122-17 177-44l-11-24zM1071 1068c-26 26-56 49-87 68l13 23c34-20 65-44 93-72l-19-19zM984 385c31 19 61 42 87 68l19-18c-28-28-59-53-93-73l-13 23zM781 324c58 3 115 17 167 42l12-24c-56-27-116-41-178-44l-1 26zM573 366c53-25 109-39 168-42l-1-26c-63 3-122 17-178 44l11 24zM450 453c26-26 56-49 88-68l-14-23c-34 20-65 45-92 73l18 18z"/>
+    <g filter="url(#cg)">
+    <path fill="rgba(0,240,255,0.35)" d="M0 0v4l1 1v2H0v5h1v2l-1 1v5h1v2H0h1c2 3 4 5 6 7h18v-8c1-1 2-2 2-3v-1c0-1 1-1 1-1h1c2-2 4-4 6-5V9s0-1 1-1h1l3-3V0h1v5l-3 3-1 1v1s0 1-1 1h-1l-2 2-3 3v1c0 1-1 1-1 1h-1l-2 2c0 1-1 1-1 1v9H7l-7-7v-2h1l-1-1v-6l1-1H0V6h1L0 5V0z" />
+    <path fill="rgba(0,240,255,0.25)" d="M3 0v18h21c3-2 5-4 7-7l6-6V0h1v5l-1 1c-1 2-3 3-5 5l-6 6c-1 1-1 2-2 2H3V0z" />
+    <path fill="rgba(0,240,255,0.35)" d="M5 0h1v1h1v2H6v5c1 0 1 1 1 1v1c0 1-1 1-1 1v4h18c1 0 1-1 1-1v-1c0-1 1-1 1-1h1c2-2 4-4 6-5V5l1-1V0h1v5s1 0 0 1c0 1 0 1-1 1h-1l-3 3c-1 1-1 2-2 2v1c0 1-1 2-1 2-1 0-1 0-1-1l-2 2H5c0-2 1-3 0-5v-1c-1 0-1-1-1-1 1 0 1-1 1-1V3C4 3 4 2 4 1h1V0z" />
+    <path fill="rgba(0,240,255,0.25)" d="M8 0h1v12h15c2-2 4-4 7-6V0v6c-2 2-4 5-7 7H8V0z" />
+    <path fill="rgba(255,43,214,0.2)" d="M56 4h9c2 1 3 3 5 4h1c0 1 1 1 1 2h-1c2 1 3 3 4 4 1 0 1 1 2 2h1c1 0 1 0 1 1v1c1 1 2 1 3 2v3l1 1v1l-1 1v5s1 0 1 1c0 0 0 1-1 1v6h1c0 1 0 2-1 2h-1c-1 1-2 1-3 2 0 1-1 1-1 2h-2v-1h-3c-1 1-2 2-3 4h-2c0 1-1 1-1 1l-1-1c-1-1-1-2-2-3-3-2-5-4-7-7l-3-3H39v-2s-1 0-1-1l1-1v-6c-1-1 0-1 0-1v-3c0-1 1-1 1-1 5-6 11-11 16-16z" />
+    <path fill="rgba(0,240,255,0.3)" d="M55 7h10c1 0 1 1 2 1 1 2 2 3 4 4 2 3 4 5 6 7 1 0 1 1 2 2v18c0 1-1 1-1 1 0 1-1 1-1 1h-5c-1 2-2 3-3 4h-5l-1-1v-1l-3-3c-1-1-2-2-2-3h-1c-1 0-1 0-1-1v-1l-3-3-1 1c0 1-1 1-1 0-1 0-1 0-1-1h-1c0 1 0 1-1 1 0 0 0 1-1 1 0 0-1-1-1-2h-1c0 1 0 1-1 2 0 0-1 0-1-1-1 0-1 0-1-1V21c5-5 9-9 13-14z" />
+    <path fill="rgba(122,92,255,0.25)" d="M56 10h9c1 1 2 1 2 2h2s1 1 1 2h-1l6 6h1c0-1 1 0 1 0v2h-1v5s1 0 1 1v1l-1 1v5c1 0 1 1 1 1 0 1 0 1-1 1v1h-4v1c-1 1-2 1-2 2-1 0-1 1-1 1h-4c-2-2-4-5-6-7-2-1-3-3-5-4 0-1-1-1-1-2h-6s-1 0-1 1h-1c-1-1-1-2-1-2 0-1 1-1 1-1v-5s-1 0-1-1 1-2 2-1c0-1 0 0 0 0l6-6v-1c0-1 0-1 1-1h1c0-1 1-1 2-2z" />
+    <path fill="rgba(0,240,255,0.35)" d="M56 19h9l2 2v2c0 1 1 1 1 2l-1 1v5s1 0 1 1c0 0 0 1-1 1 0 1-1 1-1 0h-1L54 22v-1l2-2z" />
+    <!-- Mirror: bottom-right quadrant -->
+    <g transform="translate(129,129) rotate(180)">
+    <path fill="rgba(0,240,255,0.35)" d="M0 0v4l1 1v2H0v5h1v2l-1 1v5h1v2H0h1c2 3 4 5 6 7h18v-8c1-1 2-2 2-3v-1c0-1 1-1 1-1h1c2-2 4-4 6-5V9s0-1 1-1h1l3-3V0h1v5l-3 3-1 1v1s0 1-1 1h-1l-2 2-3 3v1c0 1-1 1-1 1h-1l-2 2c0 1-1 1-1 1v9H7l-7-7v-2h1l-1-1v-6l1-1H0V6h1L0 5V0z" />
+    <path fill="rgba(255,43,214,0.2)" d="M3 0v18h21c3-2 5-4 7-7l6-6V0h1v5l-1 1c-1 2-3 3-5 5l-6 6c-1 1-1 2-2 2H3V0z" />
+    <path fill="rgba(0,240,255,0.35)" d="M5 0h1v1h1v2H6v5c1 0 1 1 1 1v1c0 1-1 1-1 1v4h18c1 0 1-1 1-1v-1c0-1 1-1 1-1h1c2-2 4-4 6-5V5l1-1V0h1v5s1 0 0 1c0 1 0 1-1 1h-1l-3 3c-1 1-1 2-2 2v1c0 1-1 2-1 2-1 0-1 0-1-1l-2 2H5c0-2 1-3 0-5v-1c-1 0-1-1-1-1 1 0 1-1 1-1V3C4 3 4 2 4 1h1V0z" />
+    <path fill="rgba(255,43,214,0.15)" d="M8 0h1v12h15c2-2 4-4 7-6V0v6c-2 2-4 5-7 7H8V0z" />
+    </g>
+    <!-- Mirror: top-right quadrant -->
+    <g transform="translate(129,0) scale(-1,1)">
+    <path fill="rgba(255,43,214,0.3)" d="M0 0v4l1 1v2H0v5h1v2l-1 1v5h1v2H0h1c2 3 4 5 6 7h18v-8c1-1 2-2 2-3v-1c0-1 1-1 1-1h1c2-2 4-4 6-5V9s0-1 1-1h1l3-3V0h1v5l-3 3-1 1v1s0 1-1 1h-1l-2 2-3 3v1c0 1-1 1-1 1h-1l-2 2c0 1-1 1-1 1v9H7l-7-7v-2h1l-1-1v-6l1-1H0V6h1L0 5V0z" />
+    <path fill="rgba(255,43,214,0.2)" d="M3 0v18h21c3-2 5-4 7-7l6-6V0h1v5l-1 1c-1 2-3 3-5 5l-6 6c-1 1-1 2-2 2H3V0z" />
+    <path fill="rgba(255,43,214,0.3)" d="M8 0h1v12h15c2-2 4-4 7-6V0v6c-2 2-4 5-7 7H8V0z" />
+    </g>
+    <!-- Mirror: bottom-left quadrant -->
+    <g transform="translate(0,129) scale(1,-1)">
+    <path fill="rgba(122,92,255,0.3)" d="M0 0v4l1 1v2H0v5h1v2l-1 1v5h1v2H0h1c2 3 4 5 6 7h18v-8c1-1 2-2 2-3v-1c0-1 1-1 1-1h1c2-2 4-4 6-5V9s0-1 1-1h1l3-3V0h1v5l-3 3-1 1v1s0 1-1 1h-1l-2 2-3 3v1c0 1-1 1-1 1h-1l-2 2c0 1-1 1-1 1v9H7l-7-7v-2h1l-1-1v-6l1-1H0V6h1L0 5V0z" />
+    <path fill="rgba(122,92,255,0.2)" d="M3 0v18h21c3-2 5-4 7-7l6-6V0h1v5l-1 1c-1 2-3 3-5 5l-6 6c-1 1-1 2-2 2H3V0z" />
+    <path fill="rgba(122,92,255,0.3)" d="M8 0h1v12h15c2-2 4-4 7-6V0v6c-2 2-4 5-7 7H8V0z" />
+    </g>
+    </g>
   </svg>
 </div>
 <div class="pf2"><span>CONFIDENTIEL</span><span>01 / 10</span></div>
@@ -247,11 +264,30 @@ h3{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:12px;margin-
 <div class="g2" style="margin-bottom:10px;">
   <div class="eb" style="display:flex;align-items:center;justify-content:center;">
     <div class="gc">
-      <svg width="180" height="115" viewBox="0 0 180 115">
-        <defs><linearGradient id="gg" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#FF2BD6"/><stop offset="33%" style="stop-color:#7C3AED"/><stop offset="66%" style="stop-color:#1E90FF"/><stop offset="100%" style="stop-color:#00F5FF"/></linearGradient>
-        <filter id="gglow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
-        <path d="M 20 95 A 70 70 0 0 1 160 95" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="10" stroke-linecap="round"/>
-        <path d="M 20 95 A 70 70 0 0 1 160 95" fill="none" stroke="url(#gg)" stroke-width="10" stroke-linecap="round" id="garc" stroke-dasharray="0 220" filter="url(#gglow)"/>
+      <!-- CYBERCORE GAUGE — EXACT SVG structure from cybercore-charts.md Section 1 -->
+      <svg width="200" height="130" viewBox="0 0 200 130" class="cyber-chart cyber-chart--gauge">
+        <defs>
+          <!-- Glow Filter — EXACT feColorMatrix from cybercore (values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 18 -7") -->
+          <filter id="glow-gauge" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur"/>
+            <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 18 -7" result="glow"/>
+            <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+          <!-- Gradient — cybercore linearGradient pattern -->
+          <linearGradient id="gauge-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#FF2BD6"/>
+            <stop offset="50%" stop-color="#7A5CFF"/>
+            <stop offset="100%" stop-color="#00F0FF"/>
+          </linearGradient>
+        </defs>
+        <!-- Track (fond) — cybercore chrome-500 @ 20% -->
+        <path id="gtrack" fill="none" stroke="rgba(108,117,125,0.2)" stroke-width="14" stroke-linecap="round"/>
+        <!-- Value Arc — with glow filter -->
+        <path id="garc" fill="none" stroke="url(#gauge-gradient)" stroke-width="14" stroke-linecap="round" filter="url(#glow-gauge)"/>
+        <!-- Indicator dot — cybercore style -->
+        <circle id="gdot" r="8" fill="#00F0FF" filter="url(#glow-gauge)" style="display:none;"/>
+        <!-- Tick marks — cybercore showTicks pattern (rendered by JS) -->
+        <g id="gticks"></g>
       </svg>
       <div class="gs gt" id="gval">0</div>
       <div class="gl">Score SEO</div>
@@ -377,7 +413,7 @@ h3{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:12px;margin-
 </div>
 
 <script>
-var D={"meta": {"badge": "AUDIT SEO PREMIUM", "title": "Audit SEO Complet", "subtitle": "Analyse approfondie de votre pr\u00e9sence digitale avec recommandations strat\u00e9giques personnalis\u00e9es et plan d'action sur 90 jours.", "client": "depan2pneus.com", "date": "15 Mars 2026", "brand": "Empire AI", "contact": "contact@empire-ai.fr"}, "kpis": {"score": 62, "pages_indexed": 47, "speed": 3.2, "backlinks": 128, "trends": {"score": 8, "pages": 12, "speed": -15, "backlinks": 23}}, "performance": {"labels": ["Oct", "Nov", "D\u00e9c", "Jan", "F\u00e9v", "Mar"], "values": [45, 48, 52, 55, 58, 62]}, "distribution": {"labels": ["Technique", "Contenu", "Autorit\u00e9", "UX"], "values": [35, 28, 22, 15]}, "categories": {"labels": ["Performance", "SEO On-Page", "Backlinks", "Technique", "Contenu"], "values": [72, 58, 45, 68, 52]}, "radar": {"labels": ["Vitesse", "Mobile", "Contenu", "Backlinks", "Technique", "UX", "S\u00e9curit\u00e9", "Maillage"], "current": [65, 72, 48, 45, 68, 55, 82, 38], "target": [90, 90, 80, 75, 85, 80, 95, 75]}, "criteria": [{"name": "Balises Title", "score": 72, "impact": "\u00c9lev\u00e9", "priority": "P1"}, {"name": "Meta Descriptions", "score": 45, "impact": "Moyen", "priority": "P2"}, {"name": "Balises H1-H6", "score": 58, "impact": "\u00c9lev\u00e9", "priority": "P1"}, {"name": "Vitesse mobile", "score": 65, "impact": "Critique", "priority": "P1"}, {"name": "HTTPS / S\u00e9curit\u00e9", "score": 95, "impact": "\u00c9lev\u00e9", "priority": "OK"}, {"name": "Images Alt Text", "score": 32, "impact": "Moyen", "priority": "P2"}, {"name": "Sitemap XML", "score": 80, "impact": "Moyen", "priority": "P3"}, {"name": "Robots.txt", "score": 90, "impact": "Moyen", "priority": "OK"}, {"name": "Donn\u00e9es structur\u00e9es", "score": 25, "impact": "\u00c9lev\u00e9", "priority": "P1"}, {"name": "Core Web Vitals", "score": 55, "impact": "Critique", "priority": "P1"}], "network": {"nodes": [{"x": 300, "y": 130, "size": 14, "color": "#00F5FF", "label": "Accueil"}, {"x": 150, "y": 60, "size": 10, "color": "#FF2BD6", "label": "Services"}, {"x": 450, "y": 60, "size": 10, "color": "#FF2BD6", "label": "Contact"}, {"x": 100, "y": 160, "size": 8, "color": "#7C3AED", "label": "Pneus"}, {"x": 200, "y": 200, "size": 8, "color": "#7C3AED", "label": "D\u00e9pannage"}, {"x": 400, "y": 200, "size": 8, "color": "#7C3AED", "label": "Zones"}, {"x": 500, "y": 160, "size": 8, "color": "#7C3AED", "label": "Devis"}, {"x": 300, "y": 240, "size": 6, "color": "#00F5FF", "label": "Blog"}, {"x": 80, "y": 240, "size": 5, "color": "#FFC800", "label": "CGV"}, {"x": 520, "y": 240, "size": 5, "color": "#FFC800", "label": "Mentions"}], "links": [{"from": 0, "to": 1}, {"from": 0, "to": 2}, {"from": 0, "to": 3}, {"from": 0, "to": 4}, {"from": 0, "to": 5}, {"from": 0, "to": 6}, {"from": 1, "to": 3}, {"from": 1, "to": 4}, {"from": 0, "to": 7}, {"from": 3, "to": 4}, {"from": 5, "to": 6}, {"from": 2, "to": 6}], "orphans": 2, "recommendations": ["Ajouter des liens internes entre Blog et pages Services", "Cr\u00e9er un maillage entre les pages Zones g\u00e9ographiques", "Relier CGV et Mentions l\u00e9gales au footer de chaque page", "Ajouter un fil d'Ariane (breadcrumb) sur toutes les pages"]}, "pipeline_steps": ["Crawl", "Analyse", "Scoring", "Rapport", "Actions", "Suivi"], "traffic": {"labels": ["Oct", "Nov", "D\u00e9c", "Jan", "F\u00e9v", "Mar"], "values": [1200, 1450, 1380, 1650, 1820, 2100]}, "positions": {"labels": ["d\u00e9pannage pneu", "pneu crev\u00e9", "r\u00e9paration pneu", "gonflage pneu", "pneu pas cher"], "values": [8, 15, 22, 12, 35]}, "backlinks": {"total": 128, "domains": 34, "quality": 58}, "matrix_items": [{"name": "Optimiser balises Title", "impact": 85, "effort": 15}, {"name": "Ajouter donn\u00e9es structur\u00e9es", "impact": 80, "effort": 30}, {"name": "Am\u00e9liorer Core Web Vitals", "impact": 90, "effort": 65}, {"name": "Cr\u00e9er contenu blog SEO", "impact": 75, "effort": 70}, {"name": "Alt text sur images", "impact": 40, "effort": 20}, {"name": "Campagne netlinking", "impact": 85, "effort": 80}, {"name": "Meta descriptions", "impact": 50, "effort": 15}, {"name": "Refonte maillage interne", "impact": 70, "effort": 45}], "timeline": [{"phase": "SEMAINE 1-2", "title": "Quick Wins Techniques", "description": "Balises title, meta descriptions, alt text, donn\u00e9es structur\u00e9es, corrections techniques prioritaires."}, {"phase": "SEMAINE 3-4", "title": "Optimisation On-Page", "description": "Core Web Vitals, vitesse mobile, maillage interne, refonte des contenus cl\u00e9s."}, {"phase": "MOIS 2", "title": "Strat\u00e9gie de Contenu", "description": "Cr\u00e9ation de pages optimis\u00e9es, blog SEO, contenu local, pages zones g\u00e9ographiques."}, {"phase": "MOIS 3", "title": "Autorit\u00e9 & Netlinking", "description": "Campagne de backlinks, partenariats locaux, inscriptions annuaires, guest posting."}], "projection": {"labels": ["Mar", "Avr", "Mai", "Jun", "Jul", "Ao\u00fb"], "values": [2100, 2800, 3500, 4200, 5000, 6000], "target": [2100, 3000, 4000, 5000, 6000, 7000]}, "objectives": ["Atteindre un score SEO de 85/100 en 90 jours", "Doubler le trafic organique (2100 \u2192 4200+ visites/mois)", "Top 5 sur les 3 mots-cl\u00e9s principaux", "Z\u00e9ro page orpheline dans le maillage interne", "Core Web Vitals 100% au vert"], "summary": {"investment": "2 500\u20ac", "roi": "x4.2", "delay": "45-90j"}, "conclusion": "Votre site dispose d'une base technique solide mais n\u00e9cessite des optimisations cibl\u00e9es pour exploiter pleinement son potentiel SEO. Les quick wins identifi\u00e9s permettront des gains rapides, tandis que la strat\u00e9gie de contenu et de netlinking assurera une croissance durable. Nous recommandons de d\u00e9marrer imm\u00e9diatement les corrections techniques prioritaires."};
+var D={"meta":{"badge":"AUDIT SEO PREMIUM","title":"Audit SEO Complet","subtitle":"Analyse approfondie de votre présence digitale avec recommandations stratégiques personnalisées et plan d'action sur 90 jours.","client":"depan2pneus.com","date":"15 Mars 2026","brand":"Empire AI","contact":"contact@empire-ai.fr"},"kpis":{"score":62,"pages_indexed":47,"speed":3.2,"backlinks":128,"trends":{"score":8,"pages":12,"speed":-15,"backlinks":23}},"performance":{"labels":["Oct","Nov","Déc","Jan","Fév","Mar"],"values":[45,48,52,55,58,62]},"distribution":{"labels":["Technique","Contenu","Autorité","UX"],"values":[35,28,22,15]},"categories":{"labels":["Performance","SEO On-Page","Backlinks","Technique","Contenu"],"values":[72,58,45,68,52]},"radar":{"labels":["Vitesse","Mobile","Contenu","Backlinks","Technique","UX","Sécurité","Maillage"],"current":[65,72,48,45,68,55,82,38],"target":[90,90,80,75,85,80,95,75]},"criteria":[{"name":"Balises Title","score":72,"impact":"Élevé","priority":"P1"},{"name":"Meta Descriptions","score":45,"impact":"Moyen","priority":"P2"},{"name":"Balises H1-H6","score":58,"impact":"Élevé","priority":"P1"},{"name":"Vitesse mobile","score":65,"impact":"Critique","priority":"P1"},{"name":"HTTPS / Sécurité","score":95,"impact":"Élevé","priority":"OK"},{"name":"Images Alt Text","score":32,"impact":"Moyen","priority":"P2"},{"name":"Sitemap XML","score":80,"impact":"Moyen","priority":"P3"},{"name":"Robots.txt","score":90,"impact":"Moyen","priority":"OK"},{"name":"Données structurées","score":25,"impact":"Élevé","priority":"P1"},{"name":"Core Web Vitals","score":55,"impact":"Critique","priority":"P1"}],"network":{"nodes":[{"x":300,"y":130,"size":14,"color":"#00F5FF","label":"Accueil"},{"x":150,"y":60,"size":10,"color":"#FF2BD6","label":"Services"},{"x":450,"y":60,"size":10,"color":"#FF2BD6","label":"Contact"},{"x":100,"y":160,"size":8,"color":"#7C3AED","label":"Pneus"},{"x":200,"y":200,"size":8,"color":"#7C3AED","label":"Dépannage"},{"x":400,"y":200,"size":8,"color":"#7C3AED","label":"Zones"},{"x":500,"y":160,"size":8,"color":"#7C3AED","label":"Devis"},{"x":300,"y":240,"size":6,"color":"#00F5FF","label":"Blog"},{"x":80,"y":240,"size":5,"color":"#FFC800","label":"CGV"},{"x":520,"y":240,"size":5,"color":"#FFC800","label":"Mentions"}],"links":[{"from":0,"to":1},{"from":0,"to":2},{"from":0,"to":3},{"from":0,"to":4},{"from":0,"to":5},{"from":0,"to":6},{"from":1,"to":3},{"from":1,"to":4},{"from":0,"to":7},{"from":3,"to":4},{"from":5,"to":6},{"from":2,"to":6}],"orphans":2,"recommendations":["Ajouter des liens internes entre Blog et pages Services","Créer un maillage entre les pages Zones géographiques","Relier CGV et Mentions légales au footer de chaque page","Ajouter un fil d'Ariane (breadcrumb) sur toutes les pages"]},"pipeline_steps":["Crawl","Analyse","Scoring","Rapport","Actions","Suivi"],"traffic":{"labels":["Oct","Nov","Déc","Jan","Fév","Mar"],"values":[1200,1450,1380,1650,1820,2100]},"positions":{"labels":["dépannage pneu","pneu crevé","réparation pneu","gonflage pneu","pneu pas cher"],"values":[8,15,22,12,35]},"backlinks":{"total":128,"domains":34,"quality":58},"matrix_items":[{"name":"Optimiser balises Title","impact":85,"effort":15},{"name":"Ajouter données structurées","impact":80,"effort":30},{"name":"Améliorer Core Web Vitals","impact":90,"effort":65},{"name":"Créer contenu blog SEO","impact":75,"effort":70},{"name":"Alt text sur images","impact":40,"effort":20},{"name":"Campagne netlinking","impact":85,"effort":80},{"name":"Meta descriptions","impact":50,"effort":15},{"name":"Refonte maillage interne","impact":70,"effort":45}],"timeline":[{"phase":"SEMAINE 1-2","title":"Quick Wins Techniques","description":"Balises title, meta descriptions, alt text, données structurées, corrections techniques prioritaires."},{"phase":"SEMAINE 3-4","title":"Optimisation On-Page","description":"Core Web Vitals, vitesse mobile, maillage interne, refonte des contenus clés."},{"phase":"MOIS 2","title":"Stratégie de Contenu","description":"Création de pages optimisées, blog SEO, contenu local, pages zones géographiques."},{"phase":"MOIS 3","title":"Autorité & Netlinking","description":"Campagne de backlinks, partenariats locaux, inscriptions annuaires, guest posting."}],"projection":{"labels":["Mar","Avr","Mai","Jun","Jul","Aoû"],"values":[2100,2800,3500,4200,5000,6000],"target":[2100,3000,4000,5000,6000,7000]},"objectives":["Atteindre un score SEO de 85/100 en 90 jours","Doubler le trafic organique (2100 → 4200+ visites/mois)","Top 5 sur les 3 mots-clés principaux","Zéro page orpheline dans le maillage interne","Core Web Vitals 100% au vert"],"summary":{"investment":"2 500€","roi":"x4.2","delay":"45-90j"},"conclusion":"Votre site dispose d'une base technique solide mais nécessite des optimisations ciblées pour exploiter pleinement son potentiel SEO. Les quick wins identifiés permettront des gains rapides, tandis que la stratégie de contenu et de netlinking assurera une croissance durable. Nous recommandons de démarrer immédiatement les corrections techniques prioritaires."};
 var C='#00F5FF',M='#FF2BD6',P='#7C3AED',B='#1E90FF',G='#00F5A0',Y='#FFC800',R='#FF4D6A';
 
 function $(i){return document.getElementById(i);}
@@ -418,7 +454,52 @@ function neonItem(color){return{color:color,shadowColor:color,shadowBlur:5};}
     var e=$(ids[i]),t=k.trends?k.trends[x]:null;
     if(t){e.textContent=(t>0?'\u2191+':'\u2193')+t+'%';e.className='kt '+(t>0?'u':'d');}
   });
-  $('garc').setAttribute('stroke-dasharray',(k.score/100)*220+' 220');
+  // CYBERCORE describeArc() — EXACT function from cybercore-charts.md
+  function describeArc(cx,cy,radius,startAngle,endAngle){
+    var startRad=(startAngle-90)*(Math.PI/180);
+    var endRad=(endAngle-90)*(Math.PI/180);
+    var x1=cx+radius*Math.cos(startRad);
+    var y1=cy+radius*Math.sin(startRad);
+    var x2=cx+radius*Math.cos(endRad);
+    var y2=cy+radius*Math.sin(endRad);
+    var largeArcFlag=endAngle-startAngle<=180?0:1;
+    return'M '+x1+' '+y1+' A '+radius+' '+radius+' 0 '+largeArcFlag+' 1 '+x2+' '+y2;
+  }
+  // Gauge params matching cybercore defaults
+  var gcx=100,gcy=105,gr=70,gStart=-135,gEnd=135;
+  // Track arc (full range)
+  $('gtrack').setAttribute('d',describeArc(gcx,gcy,gr,gStart,gEnd));
+  // Value arc (proportional to score)
+  var scoreAngle=gStart+(gEnd-gStart)*(k.score/100);
+  $('garc').setAttribute('d',describeArc(gcx,gcy,gr,gStart,scoreAngle));
+  // Indicator dot at score position
+  var dotRad=(scoreAngle-90)*(Math.PI/180);
+  var gdot=$('gdot');
+  gdot.setAttribute('cx',gcx+gr*Math.cos(dotRad));
+  gdot.setAttribute('cy',gcy+gr*Math.sin(dotRad));
+  gdot.style.display='';
+  // Tick marks — cybercore showTicks with tickCount=10
+  var gtg=$('gticks');
+  for(var ti=0;ti<=10;ti++){
+    var ta=gStart+(gEnd-gStart)*ti/10;
+    var trad=(ta-90)*(Math.PI/180);
+    var major=ti%5===0;
+    var ir1=gr+(major?5:7),ir2=gr+(major?14:10);
+    var tl=document.createElementNS('http://www.w3.org/2000/svg','line');
+    tl.setAttribute('x1',gcx+ir1*Math.cos(trad));tl.setAttribute('y1',gcy+ir1*Math.sin(trad));
+    tl.setAttribute('x2',gcx+ir2*Math.cos(trad));tl.setAttribute('y2',gcy+ir2*Math.sin(trad));
+    tl.setAttribute('stroke',major?'rgba(0,240,255,0.35)':'rgba(0,240,255,0.12)');
+    tl.setAttribute('stroke-width',major?'1.5':'0.7');
+    gtg.appendChild(tl);
+    if(major){
+      var lt=document.createElementNS('http://www.w3.org/2000/svg','text');
+      var lr=gr+20;
+      lt.setAttribute('x',gcx+lr*Math.cos(trad));lt.setAttribute('y',gcy+lr*Math.sin(trad)+2.5);
+      lt.setAttribute('text-anchor','middle');lt.setAttribute('fill','rgba(228,232,240,0.3)');
+      lt.setAttribute('font-size','6');lt.setAttribute('font-family','Orbitron,sans-serif');
+      lt.textContent=String(ti*10);gtg.appendChild(lt);
+    }
+  }
   T('gval',String(k.score));
 })();
 
@@ -637,142 +718,102 @@ T('si1',D.summary.investment);T('si2',D.summary.roi);T('si3',D.summary.delay);
 T('concl',D.conclusion);
 
 // ═══════════════════════════════════════════════════════════
-// HUD FRAME — Arwes FrameKranox-inspired SVG overlay
+// HUD FRAME — Arwes FrameKranox EXACT GEOMETRY (arwes-frames.md Section 5)
+// Resolved for viewBox 600x850, params: p=0, sw=2, bsw=0, ss=16, sll=16, lll=64
 // ═══════════════════════════════════════════════════════════
 (function(){
-  function kranoxPath(w,h){
-    var ss=14,nd=8;
-    var ny1=h*0.28,ny2=h*0.72;
-    var nlen=ss*3;
-    return[
-      'M',ss*2,1,
-      'L',ss,ss+1,
-      'L',ss,ny1,
-      'L',ss-nd,ny1+ss,
-      'L',ss-nd,ny1+ss+nlen,
-      'L',ss,ny1+ss*2+nlen,
-      'L',ss,ny2-ss*2-nlen,
-      'L',ss-nd,ny2-ss-nlen,
-      'L',ss-nd,ny2-ss,
-      'L',ss,ny2,
-      'L',ss,h-ss-1,
-      'L',ss*2,h-1,
-      'L',w-ss*2,h-1,
-      'L',w-ss,h-ss-1,
-      'L',w-ss,ny2,
-      'L',w-ss+nd,ny2-ss,
-      'L',w-ss+nd,ny2-ss-nlen,
-      'L',w-ss,ny2-ss*2-nlen,
-      'L',w-ss,ny1+ss*2+nlen,
-      'L',w-ss+nd,ny1+ss+nlen,
-      'L',w-ss+nd,ny1+ss,
-      'L',w-ss,ny1,
-      'L',w-ss,ss+1,
-      'L',w-ss*2,1,
-      'Z'
-    ].join(' ');
-  }
+  // EXACT FrameKranox formulas from createFrameKranoxSettings.ts
+  // so=sw/2=1, bso=bsw/2=0, p=0, ss=16, sll=16, lll=64
+  // leftTopBgPolyline + rightBottomBgPolyline concatenated => closed polygon
+  var kranoxBg='M 32,846 L 16,830 L 16,132 L 0,116 L 0,52 L 16,36 L 16,18 L 30,4 L 568,4 L 584,20 L 584,718 L 600,734 L 600,798 L 584,814 L 584,832 L 570,846 Z';
+  // leftTopLine: decorative line top-left corner
+  var ltLine='M 13,33 L 13,17 L 29,1 L 93,1';
+  // rightBottomLine: decorative line bottom-right corner (mirror)
+  var rbLine='M 587,817 L 587,833 L 571,849 L 507,849';
+
   var NS='http://www.w3.org/2000/svg';
   function mkEl(tag,attrs){var e=document.createElementNS(NS,tag);for(var k in attrs)e.setAttribute(k,attrs[k]);return e;}
   document.querySelectorAll('.page').forEach(function(page){
     page.querySelectorAll('.hud-tl,.hud-tr,.hud-bl,.hud-br,.hud-top').forEach(function(el){el.remove();});
     var svg=mkEl('svg',{'class':'hud-frame',viewBox:'0 0 600 850',preserveAspectRatio:'none'});
-    var w=600,h=850,ss=14;
-    // Main Kranox frame
-    svg.appendChild(mkEl('path',{d:kranoxPath(w,h),fill:'none',stroke:'rgba(0,240,255,0.1)','stroke-width':'1'}));
-    // Corner accents (Arwes FrameCorners style)
-    var corners=[
-      'M '+ss*3+',1 L '+ss*2+',1 L '+ss+','+(ss+1)+' L '+ss+','+ss*3,
-      'M '+(w-ss*3)+',1 L '+(w-ss*2)+',1 L '+(w-ss)+','+(ss+1)+' L '+(w-ss)+','+ss*3,
-      'M '+ss+','+(h-ss*3)+' L '+ss+','+(h-ss-1)+' L '+ss*2+','+(h-1)+' L '+ss*3+','+(h-1),
-      'M '+(w-ss)+','+(h-ss*3)+' L '+(w-ss)+','+(h-ss-1)+' L '+(w-ss*2)+','+(h-1)+' L '+(w-ss*3)+','+(h-1)
-    ];
-    corners.forEach(function(d){svg.appendChild(mkEl('path',{d:d,fill:'none',stroke:'rgba(0,240,255,0.22)','stroke-width':'1.5'}));});
-    // Tick marks along top and bottom edges
-    for(var i=0;i<24;i++){
-      var x=ss*3+(w-ss*6)*i/23;
-      var major=i%4===0;
-      svg.appendChild(mkEl('line',{x1:x,y1:0.5,x2:x,y2:major?6:3,stroke:major?'rgba(0,240,255,0.18)':'rgba(0,240,255,0.07)','stroke-width':major?'1':'0.5'}));
-      svg.appendChild(mkEl('line',{x1:x,y1:h-0.5,x2:x,y2:h-(major?6:3),stroke:major?'rgba(0,240,255,0.18)':'rgba(0,240,255,0.07)','stroke-width':major?'1':'0.5'}));
+    // Kranox background polygon (fill only, no stroke per Arwes spec)
+    svg.appendChild(mkEl('path',{d:kranoxBg,fill:'rgba(0,240,255,0.012)',stroke:'rgba(0,240,255,0.12)','stroke-width':'1','stroke-linejoin':'miter'}));
+    // leftTopLine decorative accent (strokeWidth=2 per Arwes default)
+    svg.appendChild(mkEl('path',{d:ltLine,fill:'none',stroke:'rgba(0,240,255,0.25)','stroke-width':'2','stroke-linecap':'square'}));
+    // rightBottomLine decorative accent (mirror)
+    svg.appendChild(mkEl('path',{d:rbLine,fill:'none',stroke:'rgba(255,43,214,0.2)','stroke-width':'2','stroke-linecap':'square'}));
+    // Tick marks along top edge (cybercore showTicks pattern)
+    for(var i=0;i<=20;i++){
+      var x=30+(568-30)*i/20;
+      var major=i%5===0;
+      svg.appendChild(mkEl('line',{x1:x,y1:4,x2:x,y2:major?12:7,stroke:major?'rgba(0,240,255,0.2)':'rgba(0,240,255,0.06)','stroke-width':major?'1':'0.5'}));
     }
-    // Tick marks along left and right edges
-    for(var j=0;j<16;j++){
-      var y=ss*3+(h-ss*6)*j/15;
+    // Tick marks along bottom edge
+    for(var i=0;i<=20;i++){
+      var x=32+(570-32)*i/20;
+      var major=i%5===0;
+      svg.appendChild(mkEl('line',{x1:x,y1:846,x2:x,y2:major?838:842,stroke:major?'rgba(255,43,214,0.15)':'rgba(255,43,214,0.05)','stroke-width':major?'1':'0.5'}));
+    }
+    // Tick marks along left encoche segments
+    for(var j=0;j<12;j++){
+      var y=36+(132-36)*j/11;
       var mj=j%4===0;
-      svg.appendChild(mkEl('line',{x1:0.5,y1:y,x2:mj?6:3,y2:y,stroke:mj?'rgba(0,240,255,0.12)':'rgba(0,240,255,0.05)','stroke-width':mj?'0.8':'0.4'}));
-      svg.appendChild(mkEl('line',{x1:w-0.5,y1:y,x2:w-(mj?6:3),y2:y,stroke:mj?'rgba(0,240,255,0.12)':'rgba(0,240,255,0.05)','stroke-width':mj?'0.8':'0.4'}));
+      svg.appendChild(mkEl('line',{x1:16,y1:y,x2:mj?22:19,y2:y,stroke:mj?'rgba(0,240,255,0.15)':'rgba(0,240,255,0.04)','stroke-width':mj?'0.8':'0.4'}));
     }
-    // Top decorative line with center gap
-    svg.appendChild(mkEl('path',{d:'M '+ss*3+',0.5 H '+w*0.38+' M '+w*0.62+',0.5 H '+(w-ss*3),fill:'none',stroke:'rgba(0,240,255,0.06)','stroke-width':'0.5'}));
-    // Center crosshair marker top
-    svg.appendChild(mkEl('circle',{cx:w/2,cy:0,r:2.5,fill:'none',stroke:'rgba(0,240,255,0.15)','stroke-width':'0.5'}));
-    svg.appendChild(mkEl('line',{x1:w/2-8,y1:0,x2:w/2-3,y2:0,stroke:'rgba(0,240,255,0.12)','stroke-width':'0.5'}));
-    svg.appendChild(mkEl('line',{x1:w/2+3,y1:0,x2:w/2+8,y2:0,stroke:'rgba(0,240,255,0.12)','stroke-width':'0.5'}));
-    // Nefrex diagonal decorations at notch junctions
-    var nd=[
-      'M 2,'+(h*0.28+ss-2)+' L 6,'+(h*0.28+ss+2),
-      'M 2,'+(h*0.72-ss+2)+' L 6,'+(h*0.72-ss-2),
-      'M '+(w-2)+','+(h*0.28+ss-2)+' L '+(w-6)+','+(h*0.28+ss+2),
-      'M '+(w-2)+','+(h*0.72-ss+2)+' L '+(w-6)+','+(h*0.72-ss-2)
-    ];
-    nd.forEach(function(d){svg.appendChild(mkEl('path',{d:d,fill:'none',stroke:'rgba(0,240,255,0.18)','stroke-width':'1'}));});
+    // Tick marks along right encoche segments
+    for(var j=0;j<12;j++){
+      var y=718+(814-718)*j/11;
+      var mj=j%4===0;
+      svg.appendChild(mkEl('line',{x1:584,y1:y,x2:mj?578:581,y2:y,stroke:mj?'rgba(255,43,214,0.12)':'rgba(255,43,214,0.04)','stroke-width':mj?'0.8':'0.4'}));
+    }
+    // Center crosshair markers (top + bottom)
+    svg.appendChild(mkEl('circle',{cx:300,cy:4,r:2,fill:'none',stroke:'rgba(0,240,255,0.18)','stroke-width':'0.5'}));
+    svg.appendChild(mkEl('line',{x1:290,y1:4,x2:296,y2:4,stroke:'rgba(0,240,255,0.12)','stroke-width':'0.5'}));
+    svg.appendChild(mkEl('line',{x1:304,y1:4,x2:310,y2:4,stroke:'rgba(0,240,255,0.12)','stroke-width':'0.5'}));
+    svg.appendChild(mkEl('circle',{cx:300,cy:846,r:2,fill:'none',stroke:'rgba(255,43,214,0.15)','stroke-width':'0.5'}));
+    // Encoche junction accent dots (Nefrex-style decorations at staircase vertices)
+    [[0,116],[0,52],[16,36],[16,132]].forEach(function(p){
+      svg.appendChild(mkEl('circle',{cx:p[0],cy:p[1],r:1.5,fill:'rgba(0,240,255,0.2)'}));
+    });
+    [[600,734],[600,798],[584,814],[584,718]].forEach(function(p){
+      svg.appendChild(mkEl('circle',{cx:p[0],cy:p[1],r:1.5,fill:'rgba(255,43,214,0.15)'}));
+    });
     page.insertBefore(svg,page.firstChild);
   });
 })();
 
-// ═══════════════════════════════════════════════════════════
-// GAUGE TICK MARKS — cybercore describeArc() inspired
-// ═══════════════════════════════════════════════════════════
-(function(){
-  var garc=document.getElementById('garc');
-  if(!garc)return;
-  var svg=garc.closest('svg');
-  var cx=90,cy=95,r=70;
-  var NS='http://www.w3.org/2000/svg';
-  function mkEl(tag,attrs){var e=document.createElementNS(NS,tag);for(var k in attrs)e.setAttribute(k,attrs[k]);return e;}
-  // Outer ring decoration
-  var ox1=cx+82*Math.cos(Math.PI),oy1=cy+82*Math.sin(Math.PI);
-  var ox2=cx+82*Math.cos(0),oy2=cy+82*Math.sin(0);
-  svg.insertBefore(mkEl('path',{d:'M '+ox1+' '+oy1+' A 82 82 0 0 1 '+ox2+' '+oy2,fill:'none',stroke:'rgba(0,245,255,0.04)','stroke-width':'0.5'}),svg.firstChild);
-  // Tick marks
-  for(var i=0;i<=20;i++){
-    var a=Math.PI-(Math.PI*i/20);
-    var major=i%5===0;
-    var r1=r+(major?4:6);
-    var r2=r+(major?12:9);
-    var x1=cx+r1*Math.cos(a),y1=cy+r1*Math.sin(a);
-    var x2=cx+r2*Math.cos(a),y2=cy+r2*Math.sin(a);
-    svg.insertBefore(mkEl('line',{x1:x1,y1:y1,x2:x2,y2:y2,stroke:major?'rgba(0,245,255,0.3)':'rgba(0,245,255,0.1)','stroke-width':major?'1.5':'0.5'}),garc);
-    if(major){
-      var lr=r+17;
-      var lx=cx+lr*Math.cos(a),ly=cy+lr*Math.sin(a);
-      var t=mkEl('text',{x:lx,y:ly+2.5,'text-anchor':'middle',fill:'rgba(228,232,240,0.25)','font-size':'5','font-family':'Orbitron,sans-serif'});
-      t.textContent=String(i*5);
-      svg.insertBefore(t,garc);
-    }
-  }
-  // Inner crosshair
-  svg.insertBefore(mkEl('line',{x1:cx-4,y1:cy,x2:cx+4,y2:cy,stroke:'rgba(0,245,255,0.08)','stroke-width':'0.5'}),garc);
-  svg.insertBefore(mkEl('line',{x1:cx,y1:cy-4,x2:cx,y2:cy+4,stroke:'rgba(0,245,255,0.08)','stroke-width':'0.5'}),garc);
-})();
+// Gauge ticks now built inline above using cybercore describeArc() — no separate section needed
 
 // ═══════════════════════════════════════════════════════════
-// HOLO DIVIDERS — Nefrex-style SVG replaces gradient lines
+// HOLO DIVIDERS — CyberEl76 dot-matrix pattern (react-cyber-elements EXACT source)
+// 3 rows of dots with gradient opacity: fil0=#b3b3b3, fil1=gray, fil2=#4d4d4d
+// Re-colored to cyan/magenta/violet
 // ═══════════════════════════════════════════════════════════
 (function(){
   var NS='http://www.w3.org/2000/svg';
   function mkEl(tag,attrs){var e=document.createElementNS(NS,tag);for(var k in attrs)e.setAttribute(k,attrs[k]);return e;}
   document.querySelectorAll('.hl').forEach(function(el){
-    el.style.height='8px';
+    el.style.height='19px';
     el.style.background='none';
     el.style.position='relative';
-    var svg=mkEl('svg',{viewBox:'0 0 500 8',preserveAspectRatio:'none'});
-    svg.style.cssText='position:absolute;top:0;left:0;width:100%;height:100%;';
-    svg.appendChild(mkEl('path',{d:'M 0,4 H 180 L 188,1 H 312 L 320,4 H 500',fill:'none',stroke:'rgba(0,240,255,0.12)','stroke-width':'0.8'}));
-    svg.appendChild(mkEl('path',{d:'M 185,7 L 190,4 H 310 L 315,7',fill:'none',stroke:'rgba(122,92,255,0.08)','stroke-width':'0.5'}));
-    svg.appendChild(mkEl('circle',{cx:188,cy:1,r:1.5,fill:'rgba(0,240,255,0.2)'}));
-    svg.appendChild(mkEl('circle',{cx:312,cy:1,r:1.5,fill:'rgba(255,43,214,0.15)'}));
-    svg.appendChild(mkEl('line',{x1:240,y1:1,x2:260,y2:1,stroke:'rgba(0,240,255,0.15)','stroke-width':'0.3'}));
+    // CyberEl76 EXACT SVG structure — viewBox 0 0 182 19, 3 rows of dots
+    var svg=mkEl('svg',{viewBox:'0 0 182 19',preserveAspectRatio:'xMidYMid meet'});
+    svg.style.cssText='position:absolute;top:0;left:0;width:100%;height:100%;opacity:0.5;';
+    // Row 1 (y=2): dots spaced ~4px — cyan gradient
+    var row1c='rgba(0,240,255,0.4)';var row1m='rgba(0,240,255,0.25)';var row1d='rgba(122,92,255,0.2)';
+    [4,8,12,17,21,25,29,34,38,42,47].forEach(function(x){svg.appendChild(mkEl('circle',{cx:x,cy:2,r:1.5,fill:row1c}));});
+    [51,55,59,64,68,72,76,81,85,89].forEach(function(x){svg.appendChild(mkEl('circle',{cx:x,cy:2,r:1.5,fill:row1m}));});
+    [93,98,102,106,111,115].forEach(function(x){svg.appendChild(mkEl('circle',{cx:x,cy:2,r:1.5,fill:row1d}));});
+    // Row 2 (y=10): dots spaced ~5.5px — magenta gradient
+    var row2c='rgba(0,240,255,0.35)';var row2m='rgba(255,43,214,0.25)';var row2d='rgba(122,92,255,0.18)';
+    [4,9,15,20,25,31].forEach(function(x){svg.appendChild(mkEl('circle',{cx:x,cy:10,r:1.5,fill:row2c}));});
+    [36,41,47,52,57,63,68,73,79,84,89,95,100].forEach(function(x){svg.appendChild(mkEl('circle',{cx:x,cy:10,r:1.5,fill:row2m}));});
+    [106,111,116,122,127,132,138,143].forEach(function(x){svg.appendChild(mkEl('circle',{cx:x,cy:10,r:1.5,fill:row2d}));});
+    // Row 3 (y=18): dots spaced ~7px — violet gradient
+    var row3c='rgba(0,240,255,0.3)';var row3m='rgba(255,43,214,0.2)';var row3d='rgba(122,92,255,0.15)';
+    [4,11,18,24,31,38,45,52,59,66].forEach(function(x){svg.appendChild(mkEl('circle',{cx:x,cy:18,r:1.2,fill:row3c}));});
+    [72,79,86,93,100,107,114,120,127,134,141].forEach(function(x){svg.appendChild(mkEl('circle',{cx:x,cy:18,r:1.2,fill:row3m}));});
+    [148,155,161,168,175,182].forEach(function(x){svg.appendChild(mkEl('circle',{cx:x,cy:18,r:1.2,fill:row3d}));});
     el.appendChild(svg);
   });
 })();
