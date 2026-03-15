@@ -1,45 +1,102 @@
-<svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 220 160" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="gauge-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <!-- Neon glow filter (3-layer like 9elements technique) -->
+    <filter id="g-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="b1"/>
+      <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="b2"/>
+      <feColorMatrix in="b2" type="matrix" values="0 0 0 0 0  0 0 0 0 0.9  0 0 0 0 1  0 0 0 0.6 0" result="cyan"/>
+      <feMerge>
+        <feMergeNode in="cyan"/>
+        <feMergeNode in="b1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="g-glow-m" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="b1"/>
+      <feColorMatrix in="b1" type="matrix" values="0 0 0 0 1  0 0 0 0 0  0 0 0 0 0.55  0 0 0 0.5 0" result="mag"/>
+      <feMerge><feMergeNode in="mag"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <!-- Arc gradient -->
+    <linearGradient id="g-grad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#FF008D"/>
-      <stop offset="50%" stop-color="#711C91"/>
+      <stop offset="40%" stop-color="#711C91"/>
       <stop offset="100%" stop-color="#00E5FF"/>
     </linearGradient>
-    <filter id="gauge-glow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
+    <!-- Radial ambient -->
+    <radialGradient id="g-ambient" cx="50%" cy="70%" r="60%">
+      <stop offset="0%" stop-color="rgba(0,229,255,0.04)"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
   </defs>
 
-  <!-- Tick marks radiales -->
-  <g transform="translate(100,100)" opacity="0.3">
-    <line x1="0" y1="-72" x2="0" y2="-68" stroke="#00E5FF" stroke-width="1" transform="rotate(-135)"/>
-    <line x1="0" y1="-72" x2="0" y2="-68" stroke="#00E5FF" stroke-width="1" transform="rotate(-108)"/>
-    <line x1="0" y1="-72" x2="0" y2="-68" stroke="#00E5FF" stroke-width="1" transform="rotate(-81)"/>
-    <line x1="0" y1="-72" x2="0" y2="-68" stroke="#00E5FF" stroke-width="1" transform="rotate(-54)"/>
-    <line x1="0" y1="-72" x2="0" y2="-68" stroke="#00E5FF" stroke-width="1" transform="rotate(-27)"/>
-    <line x1="0" y1="-72" x2="0" y2="-68" stroke="#00E5FF" stroke-width="1" transform="rotate(0)"/>
-    <line x1="0" y1="-72" x2="0" y2="-68" stroke="#00E5FF" stroke-width="1" transform="rotate(27)"/>
-    <line x1="0" y1="-72" x2="0" y2="-68" stroke="#00E5FF" stroke-width="1" transform="rotate(54)"/>
-    <line x1="0" y1="-72" x2="0" y2="-68" stroke="#00E5FF" stroke-width="1" transform="rotate(81)"/>
-    <line x1="0" y1="-72" x2="0" y2="-68" stroke="#00E5FF" stroke-width="1" transform="rotate(108)"/>
-    <line x1="0" y1="-72" x2="0" y2="-68" stroke="#00E5FF" stroke-width="1" transform="rotate(135)"/>
+  <!-- Ambient glow background -->
+  <ellipse cx="110" cy="105" rx="90" ry="70" fill="url(#g-ambient)"/>
+
+  <!-- Outer decorative ring (dashed) -->
+  <circle cx="110" cy="105" r="82" fill="none" stroke="rgba(0,229,255,0.04)" stroke-width="0.5" stroke-dasharray="2 8"/>
+
+  <!-- Tick marks (every 27 degrees, 11 ticks across 270 arc) -->
+  <g transform="translate(110,105)" opacity="0.35">
+    <line x1="0" y1="-76" x2="0" y2="-70" stroke="#00E5FF" stroke-width="0.8" transform="rotate(-135)"/>
+    <line x1="0" y1="-76" x2="0" y2="-70" stroke="#00E5FF" stroke-width="0.8" transform="rotate(-108)"/>
+    <line x1="0" y1="-76" x2="0" y2="-70" stroke="#00E5FF" stroke-width="0.8" transform="rotate(-81)"/>
+    <line x1="0" y1="-76" x2="0" y2="-70" stroke="#00E5FF" stroke-width="0.8" transform="rotate(-54)"/>
+    <line x1="0" y1="-76" x2="0" y2="-70" stroke="#00E5FF" stroke-width="0.8" transform="rotate(-27)"/>
+    <line x1="0" y1="-76" x2="0" y2="-70" stroke="#00E5FF" stroke-width="0.8" transform="rotate(0)"/>
+    <line x1="0" y1="-76" x2="0" y2="-70" stroke="#00E5FF" stroke-width="0.8" transform="rotate(27)"/>
+    <line x1="0" y1="-76" x2="0" y2="-70" stroke="#00E5FF" stroke-width="0.8" transform="rotate(54)"/>
+    <line x1="0" y1="-76" x2="0" y2="-70" stroke="#00E5FF" stroke-width="0.8" transform="rotate(81)"/>
+    <line x1="0" y1="-76" x2="0" y2="-70" stroke="#00E5FF" stroke-width="0.8" transform="rotate(108)"/>
+    <line x1="0" y1="-76" x2="0" y2="-70" stroke="#00E5FF" stroke-width="0.8" transform="rotate(135)"/>
   </g>
 
-  <!-- Cercle externe decoratif -->
-  <circle cx="100" cy="100" r="76" fill="none" stroke="rgba(0,229,255,0.06)" stroke-width="1"/>
+  <!-- Minor tick marks (between major ticks) -->
+  <g transform="translate(110,105)" opacity="0.15">
+    <line x1="0" y1="-74" x2="0" y2="-71" stroke="#00E5FF" stroke-width="0.5" transform="rotate(-121.5)"/>
+    <line x1="0" y1="-74" x2="0" y2="-71" stroke="#00E5FF" stroke-width="0.5" transform="rotate(-94.5)"/>
+    <line x1="0" y1="-74" x2="0" y2="-71" stroke="#00E5FF" stroke-width="0.5" transform="rotate(-67.5)"/>
+    <line x1="0" y1="-74" x2="0" y2="-71" stroke="#00E5FF" stroke-width="0.5" transform="rotate(-40.5)"/>
+    <line x1="0" y1="-74" x2="0" y2="-71" stroke="#00E5FF" stroke-width="0.5" transform="rotate(-13.5)"/>
+    <line x1="0" y1="-74" x2="0" y2="-71" stroke="#00E5FF" stroke-width="0.5" transform="rotate(13.5)"/>
+    <line x1="0" y1="-74" x2="0" y2="-71" stroke="#00E5FF" stroke-width="0.5" transform="rotate(40.5)"/>
+    <line x1="0" y1="-74" x2="0" y2="-71" stroke="#00E5FF" stroke-width="0.5" transform="rotate(67.5)"/>
+    <line x1="0" y1="-74" x2="0" y2="-71" stroke="#00E5FF" stroke-width="0.5" transform="rotate(94.5)"/>
+    <line x1="0" y1="-74" x2="0" y2="-71" stroke="#00E5FF" stroke-width="0.5" transform="rotate(121.5)"/>
+  </g>
 
-  <!-- Arc background -->
-  <path d="M 24.5 100 A 75.5 75.5 0 1 1 175.5 100" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="6" stroke-linecap="round"/>
+  <!-- Background arc track -->
+  <path d="M 27 105 A 83 83 0 1 1 193 105" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="5" stroke-linecap="round"/>
 
-  <!-- Arc progression (81/100 = 218.7 sur 270 total) -->
-  <path d="M 24.5 100 A 75.5 75.5 0 1 1 175.5 100" fill="none" stroke="url(#gauge-grad)" stroke-width="6" stroke-linecap="round" stroke-dasharray="218.7 270" filter="url(#gauge-glow)"/>
+  <!-- Inner decorative arc (thinner, dashed) -->
+  <path d="M 40 105 A 70 70 0 1 1 180 105" fill="none" stroke="rgba(0,229,255,0.06)" stroke-width="0.5" stroke-dasharray="4 8"/>
 
-  <!-- Cercle interieur decoratif -->
-  <circle cx="100" cy="100" r="55" fill="none" stroke="rgba(0,229,255,0.08)" stroke-width="0.5" stroke-dasharray="3 6"/>
+  <!-- Progress arc (81% of 270deg arc ≈ dasharray 177 of 218 total) -->
+  <path d="M 27 105 A 83 83 0 1 1 193 105" fill="none" stroke="url(#g-grad)" stroke-width="5" stroke-linecap="round" stroke-dasharray="177 218" filter="url(#g-glow)"/>
 
-  <!-- Score central -->
-  <text x="100" y="90" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="36" font-weight="800" fill="#00E5FF">81</text>
-  <text x="100" y="108" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="rgba(255,255,255,0.5)" letter-spacing="1.5">/100</text>
-  <text x="100" y="125" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="rgba(255,255,255,0.35)" letter-spacing="0.5">SCORE SEO</text>
+  <!-- Endpoint glow dot -->
+  <circle cx="183" cy="62" r="3" fill="#00E5FF" filter="url(#g-glow)"/>
+
+  <!-- Inner ring decoration -->
+  <circle cx="110" cy="105" r="52" fill="none" stroke="rgba(0,229,255,0.06)" stroke-width="0.3" stroke-dasharray="1 5"/>
+
+  <!-- Center crosshair -->
+  <line x1="105" y1="105" x2="115" y2="105" stroke="rgba(0,229,255,0.12)" stroke-width="0.5"/>
+  <line x1="110" y1="100" x2="110" y2="110" stroke="rgba(0,229,255,0.12)" stroke-width="0.5"/>
+
+  <!-- Score text -->
+  <text x="110" y="98" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="34" font-weight="900" fill="#00E5FF" filter="url(#g-glow)">81</text>
+  <text x="110" y="114" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="rgba(255,255,255,0.45)" letter-spacing="0.5">/100</text>
+  <text x="110" y="130" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="rgba(255,255,255,0.25)" letter-spacing="0.8">SCORE SEO</text>
+
+  <!-- HUD corner brackets (Arwes-inspired) -->
+  <path d="M 8,20 L 8,8 L 20,8" fill="none" stroke="rgba(0,229,255,0.2)" stroke-width="1"/>
+  <path d="M 200,8 L 212,8 L 212,20" fill="none" stroke="rgba(0,229,255,0.2)" stroke-width="1"/>
+  <path d="M 8,145 L 8,152 L 20,152" fill="none" stroke="rgba(0,229,255,0.12)" stroke-width="1"/>
+  <path d="M 200,152 L 212,152 L 212,145" fill="none" stroke="rgba(0,229,255,0.12)" stroke-width="1"/>
+
+  <!-- Status micro-indicators (bottom) -->
+  <circle cx="85" cy="148" r="2" fill="#00E5FF" opacity="0.5"/>
+  <text x="91" y="150" font-family="Inter,sans-serif" font-size="5" fill="rgba(255,255,255,0.3)">SCAN OK</text>
+  <circle cx="140" cy="148" r="2" fill="#FF008D" opacity="0.4"/>
+  <text x="146" y="150" font-family="Inter,sans-serif" font-size="5" fill="rgba(255,255,255,0.3)">2 ALERTS</text>
 </svg>
