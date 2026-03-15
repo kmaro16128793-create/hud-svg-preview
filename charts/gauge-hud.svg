@@ -1,0 +1,45 @@
+<svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gauge-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF008D"/>
+      <stop offset="50%" stop-color="#711C91"/>
+      <stop offset="100%" stop-color="#00E5FF"/>
+    </linearGradient>
+    <filter id="gauge-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Tick marks radiales -->
+  <g transform="translate(100,100)" opacity="0.3">
+    <line x1="0" y1="-72" x2="0" y2="-68" stroke="#00E5FF" stroke-width="1" transform="rotate(-135)"/>
+    <line x1="0" y1="-72" x2="0" y2="-68" stroke="#00E5FF" stroke-width="1" transform="rotate(-108)"/>
+    <line x1="0" y1="-72" x2="0" y2="-68" stroke="#00E5FF" stroke-width="1" transform="rotate(-81)"/>
+    <line x1="0" y1="-72" x2="0" y2="-68" stroke="#00E5FF" stroke-width="1" transform="rotate(-54)"/>
+    <line x1="0" y1="-72" x2="0" y2="-68" stroke="#00E5FF" stroke-width="1" transform="rotate(-27)"/>
+    <line x1="0" y1="-72" x2="0" y2="-68" stroke="#00E5FF" stroke-width="1" transform="rotate(0)"/>
+    <line x1="0" y1="-72" x2="0" y2="-68" stroke="#00E5FF" stroke-width="1" transform="rotate(27)"/>
+    <line x1="0" y1="-72" x2="0" y2="-68" stroke="#00E5FF" stroke-width="1" transform="rotate(54)"/>
+    <line x1="0" y1="-72" x2="0" y2="-68" stroke="#00E5FF" stroke-width="1" transform="rotate(81)"/>
+    <line x1="0" y1="-72" x2="0" y2="-68" stroke="#00E5FF" stroke-width="1" transform="rotate(108)"/>
+    <line x1="0" y1="-72" x2="0" y2="-68" stroke="#00E5FF" stroke-width="1" transform="rotate(135)"/>
+  </g>
+
+  <!-- Cercle externe decoratif -->
+  <circle cx="100" cy="100" r="76" fill="none" stroke="rgba(0,229,255,0.06)" stroke-width="1"/>
+
+  <!-- Arc background -->
+  <path d="M 24.5 100 A 75.5 75.5 0 1 1 175.5 100" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- Arc progression (81/100 = 218.7 sur 270 total) -->
+  <path d="M 24.5 100 A 75.5 75.5 0 1 1 175.5 100" fill="none" stroke="url(#gauge-grad)" stroke-width="6" stroke-linecap="round" stroke-dasharray="218.7 270" filter="url(#gauge-glow)"/>
+
+  <!-- Cercle interieur decoratif -->
+  <circle cx="100" cy="100" r="55" fill="none" stroke="rgba(0,229,255,0.08)" stroke-width="0.5" stroke-dasharray="3 6"/>
+
+  <!-- Score central -->
+  <text x="100" y="90" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="36" font-weight="800" fill="#00E5FF">81</text>
+  <text x="100" y="108" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="rgba(255,255,255,0.5)" letter-spacing="1.5">/100</text>
+  <text x="100" y="125" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="rgba(255,255,255,0.35)" letter-spacing="0.5">SCORE SEO</text>
+</svg>

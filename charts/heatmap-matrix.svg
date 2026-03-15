@@ -1,0 +1,56 @@
+<svg viewBox="0 0 360 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Labels Y -->
+  <text x="75" y="42" text-anchor="end" font-family="Inter,sans-serif" font-size="7" fill="rgba(255,255,255,0.5)">Titles</text>
+  <text x="75" y="72" text-anchor="end" font-family="Inter,sans-serif" font-size="7" fill="rgba(255,255,255,0.5)">Meta Desc</text>
+  <text x="75" y="102" text-anchor="end" font-family="Inter,sans-serif" font-size="7" fill="rgba(255,255,255,0.5)">H1 Struct</text>
+  <text x="75" y="132" text-anchor="end" font-family="Inter,sans-serif" font-size="7" fill="rgba(255,255,255,0.5)">Speed</text>
+  <text x="75" y="162" text-anchor="end" font-family="Inter,sans-serif" font-size="7" fill="rgba(255,255,255,0.5)">Images</text>
+
+  <!-- Labels X -->
+  <text x="110" y="185" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="rgba(255,255,255,0.4)">Oct</text>
+  <text x="155" y="185" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="rgba(255,255,255,0.4)">Nov</text>
+  <text x="200" y="185" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="rgba(255,255,255,0.4)">Dec</text>
+  <text x="245" y="185" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="rgba(255,255,255,0.4)">Jan</text>
+  <text x="290" y="185" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="rgba(255,255,255,0.4)">Fev</text>
+  <text x="335" y="185" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="rgba(255,255,255,0.4)">Mar</text>
+
+  <!-- Row 1: Titles -->
+  <rect x="85" y="28" width="40" height="25" rx="3" fill="#1a0a2e"/><text x="105" y="45" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="rgba(255,255,255,0.7)" font-weight="600">55</text>
+  <rect x="130" y="28" width="40" height="25" rx="3" fill="#3b0764"/><text x="150" y="45" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="rgba(255,255,255,0.8)" font-weight="600">60</text>
+  <rect x="175" y="28" width="40" height="25" rx="3" fill="#711C91"/><text x="195" y="45" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#fff" font-weight="600">65</text>
+  <rect x="220" y="28" width="40" height="25" rx="3" fill="#1E90FF"/><text x="240" y="45" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#fff" font-weight="600">70</text>
+  <rect x="265" y="28" width="40" height="25" rx="3" fill="#00E5FF"/><text x="285" y="45" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#091833" font-weight="600">78</text>
+  <rect x="310" y="28" width="40" height="25" rx="3" fill="#00E5FF"/><text x="330" y="45" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#091833" font-weight="600">82</text>
+
+  <!-- Row 2: Meta Desc -->
+  <rect x="85" y="58" width="40" height="25" rx="3" fill="#1a0a2e"/><text x="105" y="75" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="rgba(255,255,255,0.7)" font-weight="600">30</text>
+  <rect x="130" y="58" width="40" height="25" rx="3" fill="#1a0a2e"/><text x="150" y="75" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="rgba(255,255,255,0.7)" font-weight="600">35</text>
+  <rect x="175" y="58" width="40" height="25" rx="3" fill="#3b0764"/><text x="195" y="75" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="rgba(255,255,255,0.8)" font-weight="600">40</text>
+  <rect x="220" y="58" width="40" height="25" rx="3" fill="#3b0764"/><text x="240" y="75" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="rgba(255,255,255,0.8)" font-weight="600">42</text>
+  <rect x="265" y="58" width="40" height="25" rx="3" fill="#711C91"/><text x="285" y="75" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#fff" font-weight="600">48</text>
+  <rect x="310" y="58" width="40" height="25" rx="3" fill="#711C91"/><text x="330" y="75" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#fff" font-weight="600">55</text>
+
+  <!-- Row 3: H1 -->
+  <rect x="85" y="88" width="40" height="25" rx="3" fill="#3b0764"/><text x="105" y="105" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="rgba(255,255,255,0.8)" font-weight="600">50</text>
+  <rect x="130" y="88" width="40" height="25" rx="3" fill="#711C91"/><text x="150" y="105" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#fff" font-weight="600">55</text>
+  <rect x="175" y="88" width="40" height="25" rx="3" fill="#711C91"/><text x="195" y="105" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#fff" font-weight="600">60</text>
+  <rect x="220" y="88" width="40" height="25" rx="3" fill="#1E90FF"/><text x="240" y="105" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#fff" font-weight="600">68</text>
+  <rect x="265" y="88" width="40" height="25" rx="3" fill="#00E5FF"/><text x="285" y="105" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#091833" font-weight="600">75</text>
+  <rect x="310" y="88" width="40" height="25" rx="3" fill="#00E5FF"/><text x="330" y="105" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#091833" font-weight="600">80</text>
+
+  <!-- Row 4: Speed -->
+  <rect x="85" y="118" width="40" height="25" rx="3" fill="#1E90FF"/><text x="105" y="135" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#fff" font-weight="600">72</text>
+  <rect x="130" y="118" width="40" height="25" rx="3" fill="#1E90FF"/><text x="150" y="135" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#fff" font-weight="600">70</text>
+  <rect x="175" y="118" width="40" height="25" rx="3" fill="#711C91"/><text x="195" y="135" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#fff" font-weight="600">65</text>
+  <rect x="220" y="118" width="40" height="25" rx="3" fill="#1E90FF"/><text x="240" y="135" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#fff" font-weight="600">68</text>
+  <rect x="265" y="118" width="40" height="25" rx="3" fill="#1E90FF"/><text x="285" y="135" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#fff" font-weight="600">72</text>
+  <rect x="310" y="118" width="40" height="25" rx="3" fill="#00E5FF"/><text x="330" y="135" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#091833" font-weight="600">78</text>
+
+  <!-- Row 5: Images -->
+  <rect x="85" y="148" width="40" height="25" rx="3" fill="#1a0a2e"/><text x="105" y="165" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="rgba(255,255,255,0.7)" font-weight="600">20</text>
+  <rect x="130" y="148" width="40" height="25" rx="3" fill="#1a0a2e"/><text x="150" y="165" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="rgba(255,255,255,0.7)" font-weight="600">25</text>
+  <rect x="175" y="148" width="40" height="25" rx="3" fill="#3b0764"/><text x="195" y="165" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="rgba(255,255,255,0.8)" font-weight="600">30</text>
+  <rect x="220" y="148" width="40" height="25" rx="3" fill="#3b0764"/><text x="240" y="165" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="rgba(255,255,255,0.8)" font-weight="600">35</text>
+  <rect x="265" y="148" width="40" height="25" rx="3" fill="#3b0764"/><text x="285" y="165" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="rgba(255,255,255,0.8)" font-weight="600">38</text>
+  <rect x="310" y="148" width="40" height="25" rx="3" fill="#711C91"/><text x="330" y="165" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#fff" font-weight="600">45</text>
+</svg>
